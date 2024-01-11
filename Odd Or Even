@@ -1,0 +1,12 @@
+while True:
+    number = input("Enter a number\n")
+    try:
+        num = int(number)
+        if num % 2 ==0:
+            print("Number", number, "is even odd")
+        else:
+            print("Number", number, "is odd")
+    except ValueError:
+        print('Invalid. Please enter a valid number.')
+        continue
+    break
