@@ -1,0 +1,13 @@
+while True:
+    divisor = 1
+    a_str = input("Enter a number from 0 to 1000: ")
+    try:
+        a = int(a_str)
+    except ValueError:
+        print('Invalid input. Please enter a valid number.')
+        continue
+    while divisor <= a:
+        if a % divisor == 0:
+            print(divisor)
+        divisor += 1
+    break
