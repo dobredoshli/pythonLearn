@@ -1,0 +1,9 @@
+import random
+def randomArr():
+    minValue = 1
+    maxValue = 100
+    arraySize = 50
+    arr = random.sample(range(minValue, maxValue + 1), arraySize)
+    return [arr[0], arr[-1]]
+result = randomArr()
+print(result)
