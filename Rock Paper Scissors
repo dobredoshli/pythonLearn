@@ -1,0 +1,12 @@
+import random
+options = ['rock', 'paper', 'scissors']
+pl1, pl2 = input("Player 1: ").lower(), input("Player 2: ").lower()
+if pl1 not in options or pl2 not in options:
+    print("You entered the wrong value")
+else:
+    if pl1 == pl2:
+        print(f"Both players selected {pl1}. It's a tie!")
+    elif (pl1 == 'rock' and pl2 == 'scissors') or (pl1 == 'paper' and pl2 == 'rock') or (pl1 == 'scissors' and pl2 == 'paper'):
+        print(f"{pl1.capitalize()} beats {pl2}. Player 1 wins!")
+    else:
+        print(f"{pl2.capitalize()} beats {pl1}. Player 2 wins!")
