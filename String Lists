@@ -1,4 +1,4 @@
 def isPal(a):
     return a == a[::-1]
-a = input('Enter a word: ')
+a = input('Enter a word: ').lower()
 print(isPal(a))
