@@ -1,0 +1,18 @@
+def fibonacci(num):
+    lst = [0, 1]
+    while len(lst) < num:
+        lst.append(lst[-1] + lst[-2])
+    return lst
+def main():
+    num_str = input("Enter a number: ")
+    try:
+        num = int(num_str)
+        if num <= 0:
+            print("Please enter a positive integer.")
+        else:
+            result = fibonacci(num)
+            print(f"Fibonacci sequence with {num} numbers: {result}")
+    except ValueError:
+        print("Invalid input. Please enter a valid positive integer.")
+if __name__ == "__main__":
+    main()
