@@ -1,0 +1,10 @@
+import random
+def randomArr(arraySize, minValue, maxValue):
+    randomArray = random.sample(range(minValue, maxValue + 1), arraySize)
+    return randomArray
+rA1 = randomArr(10, 0, 100)
+rA2 = randomArr(8, 0, 100)
+print(rA1,rA2)
+for i in rA1:
+    if i in rA2:
+        print(i)
