@@ -1,0 +1,17 @@
+import random
+
+try:
+    randomNumber = random.randint(1, 9)
+    print(randomNumber)
+    while True:
+        inp = input("Guess: ")
+        guess = int(inp)
+        if guess == randomNumber:
+            print('Exactly')
+            break  # Exit the loop if the guess is correct
+        elif guess < randomNumber:
+            print("Try higher")
+        else:
+            print("Try lower")
+except ValueError:
+    print('Invalid input. Please enter a valid integer.')
