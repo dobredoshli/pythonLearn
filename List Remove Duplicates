@@ -1,0 +1,2 @@
+def listRemoveDuplicates(a):
+    return set(a) if isinstance(a, list) == True else print("Your variable is not a list")
