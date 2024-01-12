@@ -1,0 +1,2 @@
+def reverseWordOrder(a):
+    return ' '.join(a.split()[::-1])
