@@ -1,0 +1,32 @@
+import random
+try:
+    order = 0
+    cows = 0
+    bulls = 0
+    randomNumber = random.randint(1000, 9999)
+    print(randomNumber)
+
+    while True:
+        inp = input("Guess: ")
+        inpStr = str(inp)
+        
+        if int(inpStr) == randomNumber:
+            print('Exactly')
+            break
+        elif len(inpStr) != 4:
+            print("Should Be a 4-digit number")
+        else:
+            for i in inpStr:
+                if i == str(randomNumber)[order]:
+                    cows += 1
+                elif i in set(str(randomNumber)):
+                    bulls += 1
+                order += 1
+
+        print('Cows:', cows, 'Bulls:', bulls)
+        order = 0
+        cows = 0
+        bulls = 0
+
+except ValueError:
+    print('Invalid input. Please enter a valid integer.')
