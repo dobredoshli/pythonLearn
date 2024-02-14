@@ -1,0 +1,23 @@
+##Write a Python program to create a person class. Include attributes like name, 
+##country and date of birth. Implement a method to determine the person's age.
+
+
+
+import datetime
+
+
+class Person:
+    """A class representing a Person"""
+
+    def __init__(self, name, country, dateOfBirth):
+        self.name = name
+        self.country = country
+        self.dateOfBirth = dateOfBirth
+
+    def getAge(self):
+        currentYear = datetime.datetime.now().year
+        return currentYear - self.dateOfBirth
+
+
+p1 = Person("John", "Belarus", dateOfBirth=1970)
+print(p1.getAge())
